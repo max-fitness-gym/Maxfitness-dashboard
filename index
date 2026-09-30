@@ -235,7 +235,7 @@ async function loadData(){
       '<div style="background:var(--surface);border:1px solid var(--danger);border-radius:6px;padding:24px;max-width:400px;text-align:center;color:var(--danger);">'+
       '<div style="font-size:24px;margin-bottom:12px;">❌</div>'+
       '<div style="font-weight:600;margin-bottom:8px;">โหลดข้อมูลไม่ได้</div>'+
-      '<div style="font-size:12px;color:var(--muted);">'+e.message+'<br><br>https://script.google.com/macros/s/AKfycbw2X-GNjH31YcdeolD0YHLQyzTzqfAmiRmfD2b-DuWHRrOfHdMRgolzImOFvDVcCTmX/exec<br><br>⚠️ หากเปิดจากไฟล์โดยตรง (file://) ต้องอัปโหลดขึ้น GitHub Pages ก่อน</div></div>';
+      '<div style="font-size:12px;color:var(--muted);">'+e.message+'<br><br>https://script.google.com/macros/s/AKfycbw2X-GNjH31YcdeolD0YHLQyzTzqfAmiRmfD2b-DuWHRrOfHdMRgolzImOFvDVcCTmX/exec<br><br></div></div>';
   }
 }
 
