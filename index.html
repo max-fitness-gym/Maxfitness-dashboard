@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fitness Business & Operations Dashboard</title>
+    <title>Fitness Business Real-Data Analytics Dashboard</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -41,8 +41,8 @@
                 <i data-lucide="activity" class="w-6 h-6"></i>
             </div>
             <div>
-                <h1 class="text-xl font-bold text-white tracking-wide">FITNESS ANALYTICS DASHBOARD</h1>
-                <p class="text-xs text-slate-400">ระบบวิเคราะห์ข้อมูลยอดขาย ค่าใช้จ่าย สมาชิก และการเข้าใช้บริการ</p>
+                <h1 class="text-xl font-bold text-white tracking-wide">FITNESS REAL-DATA DASHBOARD</h1>
+                <p class="text-xs text-slate-400">สรุปผลข้อมูลจริงจากระบบทั้ง 4 Tab (Sales, Expenses, Members & Check-ins)</p>
             </div>
         </div>
         <div class="flex items-center space-x-3">
@@ -60,19 +60,19 @@
         <div class="flex border-b border-slate-700 space-x-2 overflow-x-auto">
             <button onclick="switchTab('tab1')" id="btn-tab1" class="tab-btn active border-b-2 border-emerald-500 text-emerald-400 font-medium px-4 py-3 flex items-center space-x-2 whitespace-nowrap">
                 <i data-lucide="badge-dollar-sign" class="w-4 h-4"></i>
-                <span>1. Database ขาย</span>
+                <span>1. Database ขาย (326 รายการ)</span>
             </button>
             <button onclick="switchTab('tab2')" id="btn-tab2" class="tab-btn border-b-2 border-transparent text-slate-400 hover:text-slate-200 font-medium px-4 py-3 flex items-center space-x-2 whitespace-nowrap">
                 <i data-lucide="receipt" class="w-4 h-4"></i>
-                <span>2. ค่าใช้จ่ายรายเดือน</span>
+                <span>2. ค่าใช้จ่ายรายเดือน (182 รายการ)</span>
             </button>
             <button onclick="switchTab('tab3')" id="btn-tab3" class="tab-btn border-b-2 border-transparent text-slate-400 hover:text-slate-200 font-medium px-4 py-3 flex items-center space-x-2 whitespace-nowrap">
                 <i data-lucide="users" class="w-4 h-4"></i>
-                <span>3. สมาชิก (Airsto Query)</span>
+                <span>3. สมาชิก Airsto (8,627 ราย)</span>
             </button>
             <button onclick="switchTab('tab4')" id="btn-tab4" class="tab-btn border-b-2 border-transparent text-slate-400 hover:text-slate-200 font-medium px-4 py-3 flex items-center space-x-2 whitespace-nowrap">
                 <i data-lucide="door-open" class="w-4 h-4"></i>
-                <span>4. เช็คอิน เข้า-ออก</span>
+                <span>4. เช็คอินเข้า-ออก (36,906 ครั้ง)</span>
             </button>
         </div>
 
@@ -82,84 +82,47 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
                     <div class="flex justify-between items-start text-slate-400">
-                        <span class="text-sm">ยอดขายรวม</span>
+                        <span class="text-sm">ยอดขายรวมสุทธิ</span>
                         <i data-lucide="trending-up" class="w-5 h-5 text-emerald-400"></i>
                     </div>
-                    <div class="text-2xl font-bold text-white mt-2">฿ 1,250,000</div>
-                    <span class="text-xs text-emerald-400 flex items-center mt-1">↑ +12.5% จากเดือนที่แล้ว</span>
+                    <div class="text-2xl font-bold text-white mt-2">฿ 206,455.00</div>
+                    <span class="text-xs text-emerald-400 flex items-center mt-1">จากข้อมูลการขายทั้งหมด</span>
                 </div>
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
                     <div class="flex justify-between items-start text-slate-400">
-                        <span class="text-sm">จำนวนรายการขาย</span>
+                        <span class="text-sm">จำนวนคำสั่งซื้อ</span>
                         <i data-lucide="shopping-bag" class="w-5 h-5 text-blue-400"></i>
                     </div>
-                    <div class="text-2xl font-bold text-white mt-2">482 รายการ</div>
-                    <span class="text-xs text-blue-400 flex items-center mt-1">เฉลี่ย 16 รายการ/วัน</span>
+                    <div class="text-2xl font-bold text-white mt-2">326 รายการ</div>
+                    <span class="text-xs text-blue-400 flex items-center mt-1">ลูกค้าเก่า 313 / ลูกค้าใหม่ 13</span>
                 </div>
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
                     <div class="flex justify-between items-start text-slate-400">
-                        <span class="text-sm">แพ็กเกจยอดฮิต</span>
+                        <span class="text-sm">หมวดหมู่สร้างรายได้สูงสุด</span>
                         <i data-lucide="award" class="w-5 h-5 text-purple-400"></i>
                     </div>
-                    <div class="text-2xl font-bold text-white mt-2">12 เดือน (รายปี)</div>
-                    <span class="text-xs text-slate-400 mt-1">คิดเป็น 45% ของยอดขายทั้งหมด</span>
+                    <div class="text-2xl font-bold text-white mt-2">Personal Trainer</div>
+                    <span class="text-xs text-purple-400 mt-1">ยอดรวม ฿157,089.00 (76.1%)</span>
                 </div>
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
                     <div class="flex justify-between items-start text-slate-400">
-                        <span class="text-sm">ยอดขายเฉลี่ย/บิล</span>
-                        <i data-lucide="calculator" class="w-5 h-5 text-amber-400"></i>
+                        <span class="text-sm">ช่องทางรับชำระหลัก</span>
+                        <i data-lucide="credit-card" class="w-5 h-5 text-amber-400"></i>
                     </div>
-                    <div class="text-2xl font-bold text-white mt-2">฿ 2,593</div>
-                    <span class="text-xs text-slate-400 mt-1">Ticket Size เฉลี่ย</span>
+                    <div class="text-2xl font-bold text-white mt-2">โอน UOB</div>
+                    <span class="text-xs text-amber-400 mt-1">คิดเป็น ฿174,939.00 (84.7%)</span>
                 </div>
             </div>
 
             <!-- Charts Row -->
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 lg:col-span-2 shadow-lg">
-                    <h3 class="text-base font-semibold text-white mb-4">แนวโน้มยอดขายรายเดือน (Sales Trend)</h3>
-                    <div class="h-72"><canvas id="chartSalesTrend"></canvas></div>
-                </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                    <h3 class="text-base font-semibold text-white mb-4">สัดส่วนประเภทสมาชิก/แพ็กเกจ</h3>
+                    <h3 class="text-base font-semibold text-white mb-4">สัดส่วนยอดขายตามหมวดหมู่สินค้า</h3>
                     <div class="h-72"><canvas id="chartSalesCategory"></canvas></div>
                 </div>
-            </div>
-
-            <!-- Data Table -->
-            <div class="bg-slate-800 rounded-2xl border border-slate-700/60 overflow-hidden shadow-lg">
-                <div class="p-4 border-b border-slate-700 flex justify-between items-center">
-                    <h3 class="font-semibold text-white">ตารางข้อมูลการขายล่าสุด</h3>
-                    <input type="text" placeholder="ค้นหาชื่อ, แพ็กเกจ..." class="bg-slate-900 border border-slate-700 text-xs text-white rounded-lg px-3 py-2 w-64 focus:outline-none focus:border-emerald-500">
-                </div>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-sm text-left text-slate-300">
-                        <thead class="text-xs uppercase bg-slate-900/50 text-slate-400 border-b border-slate-700">
-                            <tr>
-                                <th class="px-6 py-3">วันที่</th>
-                                <th class="px-6 py-3">ชื่อลูกค้า</th>
-                                <th class="px-6 py-3">แพ็กเกจ/สินค้า</th>
-                                <th class="px-6 py-3 text-right">จำนวนเงิน (บาท)</th>
-                                <th class="px-6 py-3">ช่องทางชำระเงิน</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-700/50">
-                            <tr class="hover:bg-slate-700/30">
-                                <td class="px-6 py-4">01/08/2026</td>
-                                <td class="px-6 py-4 font-medium text-white">สมชาย ใจดี</td>
-                                <td class="px-6 py-4"><span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-1 rounded text-xs">รายปี 12 เดือน</span></td>
-                                <td class="px-6 py-4 text-right font-medium text-white">15,000</td>
-                                <td class="px-6 py-4">โอนเงินผ่านธนาคาร</td>
-                            </tr>
-                            <tr class="hover:bg-slate-700/30">
-                                <td class="px-6 py-4">01/08/2026</td>
-                                <td class="px-6 py-4 font-medium text-white">นภา สุขสันต์</td>
-                                <td class="px-6 py-4"><span class="bg-blue-500/10 text-blue-400 border border-blue-500/20 px-2 py-1 rounded text-xs">ราย 1 เดือน</span></td>
-                                <td class="px-6 py-4 text-right font-medium text-white">1,800</td>
-                                <td class="px-6 py-4">บัตรเครดิต</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
+                    <h3 class="text-base font-semibold text-white mb-4">ยอดขายแยกตามช่องทางการชำระเงิน</h3>
+                    <div class="h-72"><canvas id="chartSalesPayment"></canvas></div>
                 </div>
             </div>
         </section>
@@ -168,28 +131,30 @@
         <section id="tab2" class="tab-content hidden space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                    <span class="text-sm text-slate-400">ค่าใช้จ่ายรวมเดือนนี้</span>
-                    <div class="text-2xl font-bold text-rose-400 mt-2">฿ 420,000</div>
+                    <span class="text-sm text-slate-400">ยอดค่าใช้จ่ายรวมสุทธิ</span>
+                    <div class="text-2xl font-bold text-rose-400 mt-2">฿ 3,047,150.08</div>
+                    <span class="text-xs text-slate-400 mt-1">รวมทั้งหมด 182 รายการ</span>
+                </div>
+                <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
+                    <span class="text-sm text-slate-400">แผนกที่มีค่าใช้จ่ายสูงสุด</span>
+                    <div class="text-2xl font-bold text-white mt-2">ฝ่ายขาย</div>
+                    <span class="text-xs text-rose-400 mt-1">฿ 1,161,059.00 (โบนัส/คอมมิชชั่น)</span>
                 </div>
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
                     <span class="text-sm text-slate-400">หมวดหมู่ค่าใช้จ่ายสูงสุด</span>
-                    <div class="text-2xl font-bold text-white mt-2">เงินเดือน/ค่าจ้าง</div>
-                    <span class="text-xs text-slate-400 mt-1">คิดเป็น 55% ของค่าใช้จ่ายรวม</span>
-                </div>
-                <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                    <span class="text-sm text-slate-400">กำไรขั้นต้น (Net Profit)</span>
-                    <div class="text-2xl font-bold text-emerald-400 mt-2">฿ 830,000</div>
+                    <div class="text-2xl font-bold text-amber-400 mt-2">โบนัสจากยอดขาย</div>
+                    <span class="text-xs text-slate-400 mt-1">฿ 1,142,207.00</span>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                    <h3 class="text-base font-semibold text-white mb-4">สัดส่วนค่าใช้จ่ายตามหมวดหมู่ (Expense Breakdown)</h3>
-                    <div class="h-72"><canvas id="chartExpenseDoughnut"></canvas></div>
+                    <h3 class="text-base font-semibold text-white mb-4">สัดส่วนค่าใช้จ่ายแยกตามแผนก</h3>
+                    <div class="h-72"><canvas id="chartExpenseDept"></canvas></div>
                 </div>
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                    <h3 class="text-base font-semibold text-white mb-4">เปรียบเทียบ รายรับ VS รายจ่าย รายเดือน</h3>
-                    <div class="h-72"><canvas id="chartIncomeVsExpense"></canvas></div>
+                    <h3 class="text-base font-semibold text-white mb-4">Top หมวดหมู่ค่าใช้จ่ายหลัก</h3>
+                    <div class="h-72"><canvas id="chartExpenseCat"></canvas></div>
                 </div>
             </div>
         </section>
@@ -198,26 +163,35 @@
         <section id="tab3" class="tab-content hidden space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                    <span class="text-sm text-slate-400">สมาชิกทั้งหมด</span>
-                    <div class="text-2xl font-bold text-white mt-2">1,540 คน</div>
+                    <span class="text-sm text-slate-400">จำนวนสมาชิกในฐานข้อมูล</span>
+                    <div class="text-2xl font-bold text-white mt-2">8,627 คน</div>
                 </div>
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                    <span class="text-sm text-slate-400">สถานะ Active</span>
-                    <div class="text-2xl font-bold text-emerald-400 mt-2">1,120 คน</div>
+                    <span class="text-sm text-slate-400">สมาชิกสถานะปกติ (Active)</span>
+                    <div class="text-2xl font-bold text-emerald-400 mt-2">287 คน</div>
+                    <span class="text-xs text-slate-400 mt-1">คิดเป็น 3.3% ของสมาชิกทั้งหมด</span>
                 </div>
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                    <span class="text-sm text-slate-400">ใกล้หมดอายุ (ภายใน 30 วัน)</span>
-                    <div class="text-2xl font-bold text-amber-400 mt-2">85 คน</div>
+                    <span class="text-sm text-slate-400">หมดอายุสมาชิก (Expired)</span>
+                    <div class="text-2xl font-bold text-rose-400 mt-2">8,340 คน</div>
+                    <span class="text-xs text-slate-400 mt-1">ส่วนใหญ่หมดอายุเกิน 2 ปี</span>
                 </div>
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                    <span class="text-sm text-slate-400">หมดอายุแล้ว (Expired)</span>
-                    <div class="text-2xl font-bold text-rose-400 mt-2">335 คน</div>
+                    <span class="text-sm text-slate-400">สัดส่วน ชาย : หญิง</span>
+                    <div class="text-2xl font-bold text-blue-400 mt-2">61.4% : 38.6%</div>
+                    <span class="text-xs text-slate-400 mt-1">ชาย 5,298 / หญิง 3,329 คน</span>
                 </div>
             </div>
 
-            <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                <h3 class="text-base font-semibold text-white mb-4">การกระจายตัวของกลุ่มอายุสมาชิก (Member Demographics)</h3>
-                <div class="h-72"><canvas id="chartMemberAge"></canvas></div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
+                    <h3 class="text-base font-semibold text-white mb-4">สัดส่วนเพศของสมาชิก</h3>
+                    <div class="h-72"><canvas id="chartMemberGender"></canvas></div>
+                </div>
+                <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
+                    <h3 class="text-base font-semibold text-white mb-4">จำแนกตามช่วงวันคงเหลือ / สถานะหมดอายุ</h3>
+                    <div class="h-72"><canvas id="chartMemberRange"></canvas></div>
+                </div>
             </div>
         </section>
 
@@ -225,33 +199,41 @@
         <section id="tab4" class="tab-content hidden space-y-6">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                    <span class="text-sm text-slate-400">เช็คอินวันนี้</span>
-                    <div class="text-2xl font-bold text-white mt-2">214 ครั้ง</div>
+                    <span class="text-sm text-slate-400">ยอดเช็คอินรวมทั้งหมด</span>
+                    <div class="text-2xl font-bold text-white mt-2">36,906 ครั้ง</div>
+                    <span class="text-xs text-slate-400 mt-1">ช่วงมกราคม 2568 - สิงหาคม 2569</span>
                 </div>
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                    <span class="text-sm text-slate-400">ช่วงเวลาพีคสุด (Peak Hour)</span>
-                    <div class="text-2xl font-bold text-amber-400 mt-2">17:00 - 19:00 น.</div>
+                    <span class="text-sm text-slate-400">วันที่มีผู้ใช้บริการสูงสุด</span>
+                    <div class="text-2xl font-bold text-amber-400 mt-2">วันอังคาร & จันทร์</div>
+                    <span class="text-xs text-amber-400 mt-1">เฉลี่ย 6,389 และ 6,280 ครั้ง</span>
                 </div>
                 <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                    <span class="text-sm text-slate-400">ระยะเวลาใช้บริการเฉลี่ย</span>
-                    <div class="text-2xl font-bold text-blue-400 mt-2">1 ชม. 45 นาที</div>
+                    <span class="text-sm text-slate-400">ช่วงเวลา Peak Hour</span>
+                    <div class="text-2xl font-bold text-emerald-400 mt-2">17:00 - 19:00 น.</div>
+                    <span class="text-xs text-slate-400 mt-1">หนาแน่นสูงสุด 5,036 ครั้ง/ช่วงเวลา</span>
                 </div>
             </div>
 
-            <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
-                <h3 class="text-base font-semibold text-white mb-4">ความหนาแน่นของการเข้าใช้บริการตามช่วงเวลา (Peak Hours Traffic)</h3>
-                <div class="h-72"><canvas id="chartCheckinHeatmap"></canvas></div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
+                    <h3 class="text-base font-semibold text-white mb-4">จำนวนการเช็คอินจำแนกตามวันในสัปดาห์</h3>
+                    <div class="h-72"><canvas id="chartCheckinDay"></canvas></div>
+                </div>
+                <div class="bg-slate-800 p-5 rounded-2xl border border-slate-700/60 shadow-lg">
+                    <h3 class="text-base font-semibold text-white mb-4">ความหนาแน่นผู้ใช้บริการตามช่วงเวลา (ชั่วโมง)</h3>
+                    <div class="h-72"><canvas id="chartCheckinHour"></canvas></div>
+                </div>
             </div>
         </section>
 
     </main>
 
-    <!-- Script JavaScript -->
     <script>
         // Init Lucide Icons
         lucide.createIcons();
 
-        // Switch Tabs Functionality
+        // Switch Tabs
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(el => el.classList.add('hidden'));
             document.querySelectorAll('.tab-btn').forEach(el => {
@@ -265,94 +247,121 @@
             activeBtn.classList.remove('border-transparent', 'text-slate-400');
         }
 
-        // Dark/Light Theme Toggle
         function toggleTheme() {
             document.documentElement.classList.toggle('dark');
         }
 
-        // --- Chart Configs ---
+        // Global Chart Defaults
         Chart.defaults.color = '#94a3b8';
         Chart.defaults.font.family = 'Kanit';
 
-        // 1. Sales Trend Line Chart
-        new Chart(document.getElementById('chartSalesTrend'), {
-            type: 'line',
-            data: {
-                labels: ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.'],
-                datasets: [{
-                    label: 'ยอดขาย (บาท)',
-                    data: [850000, 920000, 1100000, 980000, 1050000, 1150000, 1200000, 1250000],
-                    borderColor: '#22c55e',
-                    backgroundColor: 'rgba(34, 197, 94, 0.1)',
-                    fill: true,
-                    tension: 0.4
-                }]
-            },
-            options: { responsive: true, maintainAspectRatio: false }
-        });
-
-        // 2. Sales Category Doughnut Chart
+        // 1. Sales Category Chart
         new Chart(document.getElementById('chartSalesCategory'), {
             type: 'doughnut',
             data: {
-                labels: ['แพ็กเกจ 12 เดือน', 'แพ็กเกจ 6 เดือน', 'แพ็กเกจ 1 เดือน', 'Personal Trainer', 'อื่นๆ'],
+                labels: ['Personal Trainer', 'Member', 'อื่นๆ'],
                 datasets: [{
-                    data: [45, 25, 15, 10, 5],
-                    backgroundColor: ['#22c55e', '#3b82f6', '#a855f7', '#f59e0b', '#64748b']
+                    data: [157089, 45211, 4155],
+                    backgroundColor: ['#22c55e', '#3b82f6', '#64748b']
                 }]
             },
             options: { responsive: true, maintainAspectRatio: false }
         });
 
-        // 3. Expense Breakdown Chart
-        new Chart(document.getElementById('chartExpenseDoughnut'), {
+        // 2. Sales Payment Method Chart
+        new Chart(document.getElementById('chartSalesPayment'), {
+            type: 'bar',
+            data: {
+                labels: ['UOB 813-176-647-5', 'KBANK 010-178-5483', 'เงินสด'],
+                datasets: [{
+                    label: 'ยอดเงินสุทธิ (บาท)',
+                    data: [174939, 22982, 8534],
+                    backgroundColor: ['#06b6d4', '#10b981', '#f59e0b']
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+
+        // 3. Expense Dept Chart
+        new Chart(document.getElementById('chartExpenseDept'), {
             type: 'pie',
             data: {
-                labels: ['เงินเดือนพนักงาน/เทรนเนอร์', 'ค่าเช่าสถานที่', 'ค่าน้ำ-ค่าไฟ', 'การตลาด/โฆษณา', 'ค่าซ่อมบำรุงอุปกรณ์'],
+                labels: ['ฝ่ายขาย', 'ฝ่าย HR', 'ฝ่ายธุรการ', 'ฝ่ายการตลาด'],
                 datasets: [{
-                    data: [55, 20, 12, 8, 5],
-                    backgroundColor: ['#ef4444', '#f97316', '#eab308', '#06b6d4', '#8b5cf6']
+                    data: [1161059, 922943.2, 818351.9, 144795.98],
+                    backgroundColor: ['#ef4444', '#f97316', '#3b82f6', '#a855f7']
                 }]
             },
             options: { responsive: true, maintainAspectRatio: false }
         });
 
-        // 4. Income Vs Expense Bar Chart
-        new Chart(document.getElementById('chartIncomeVsExpense'), {
+        // 4. Expense Category Chart
+        new Chart(document.getElementById('chartExpenseCat'), {
             type: 'bar',
             data: {
-                labels: ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.'],
-                datasets: [
-                    { label: 'รายรับ', data: [850000, 920000, 1100000, 980000, 1050000, 1150000, 1200000, 1250000], backgroundColor: '#22c55e' },
-                    { label: 'รายจ่าย', data: [380000, 390000, 410000, 400000, 405000, 415000, 410000, 420000], backgroundColor: '#ef4444' }
-                ]
+                labels: ['โบนัสจากยอดขาย', 'เงินเดือน/ค่าจ้าง', 'ค่าเช่าสำนักงาน', 'Facebook Ads', 'ค่าจ้างรับทำงานให้'],
+                datasets: [{
+                    label: 'ยอดเงินสุทธิ (บาท)',
+                    data: [1142207, 885278, 776222.3, 102504.34, 60750],
+                    backgroundColor: '#ef4444'
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false, indexAxis: 'y' }
+        });
+
+        // 5. Member Gender Chart
+        new Chart(document.getElementById('chartMemberGender'), {
+            type: 'doughnut',
+            data: {
+                labels: ['ชาย', 'หญิง'],
+                datasets: [{
+                    data: [5298, 3329],
+                    backgroundColor: ['#3b82f6', '#ec4899']
+                }]
             },
             options: { responsive: true, maintainAspectRatio: false }
         });
 
-        // 5. Member Age Demographics Bar Chart
-        new Chart(document.getElementById('chartMemberAge'), {
+        // 6. Member Range Chart
+        new Chart(document.getElementById('chartMemberRange'), {
             type: 'bar',
             data: {
-                labels: ['18-24 ปี', '25-34 ปี', '35-44 ปี', '45-54 ปี', '55 ปีขึ้นไป'],
+                labels: ['เกิน 2 ปี', '1-2 ปี (หมดอายุ)', '181-365 วัน (หมดอายุ)', '91-180 วัน (หมดอายุ)', '31-90 วัน (หมดอายุ)', 'เกิน 180 วัน', '61-90 วัน'],
                 datasets: [{
                     label: 'จำนวนสมาชิก (คน)',
-                    data: [280, 650, 390, 150, 70],
-                    backgroundColor: '#3b82f6'
+                    data: [7506, 360, 211, 108, 97, 75, 70],
+                    backgroundColor: '#8b5cf6'
                 }]
             },
             options: { responsive: true, maintainAspectRatio: false }
         });
 
-        // 6. Checkin Traffic Chart
-        new Chart(document.getElementById('chartCheckinHeatmap'), {
+        // 7. Checkin Day Chart
+        new Chart(document.getElementById('chartCheckinDay'), {
             type: 'bar',
             data: {
-                labels: ['06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'],
+                labels: ['วันจันทร์', 'วันอังคาร', 'วันพุธ', 'วันพฤหัสบดี', 'วันศุกร์', 'วันเสาร์', 'วันอาทิตย์'],
                 datasets: [{
-                    label: 'หนาแน่นสูงสุด (คน/ชั่วโมง)',
-                    data: [25, 45, 30, 35, 20, 65, 120, 85, 30],
-                    backgroundColor: '#f59e0b'
+                    label: 'จำนวนครั้งที่เช็คอิน',
+                    data: [6280, 6389, 5844, 6078, 5281, 3890, 3144],
+                    backgroundColor: '#10b981'
+                }]
+            },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+
+        // 8. Checkin Hour Chart
+        new Chart(document.getElementById('chartCheckinHour'), {
+            type: 'line',
+            data: {
+                labels: ['07:00', '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00', '18:00', '19:00', '20:00', '21:00'],
+                datasets: [{
+                    label: 'จำนวนการเช็คอิน (ครั้ง)',
+                    data: [574, 3376, 3025, 2645, 1555, 1890, 1711, 1752, 2229, 2863, 4531, 5036, 3635, 1875, 209],
+                    borderColor: '#f59e0b',
+                    backgroundColor: 'rgba(245, 158, 11, 0.1)',
+                    fill: true,
+                    tension: 0.3
                 }]
             },
             options: { responsive: true, maintainAspectRatio: false }
